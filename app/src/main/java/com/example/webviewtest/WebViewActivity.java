@@ -51,7 +51,6 @@ public class WebViewActivity extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 progressBar.setVisibility(View.GONE);
-//                TransitionProgressDialog.removeSimpleProgressDialog();
             }
         });
         mWebView.getSettings().setLoadsImagesAutomatically(true);
@@ -81,43 +80,5 @@ public class WebViewActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    @Override
-    public void onAttachedToWindow() {
-        super.onAttachedToWindow();
-//        Bundle bundle=getIntent().getExtras();
-//        setToolbarTitle(bundle.getString(Constants.WEBVIEW_TITLE));
-//        if(bundle.containsKey(Constants.WEBVIEW_SHOW_HOME) && bundle.getBoolean(Constants.WEBVIEW_SHOW_HOME)) {
-//            setCustomToolbarNavIcon(R.drawable.icon_cancel_white);
-//            setCustomNavigationClickListener();
-//        } else {
-//            setCustomToolbarNavIcon(R.drawable.menu_wallet);
-//            super.setCustomNavigationClickListener();
-//        }
-    }
-
-//    @Override
-//    protected void setCustomNavigationClickListener() {
-//        getToolBar().setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                onBackPressed();
-//            }
-//        });
-//    }
-//
-//    @Override
-//    protected boolean useToolbar() {
-//        return true;
-//    }
-//
-//    @Override
-//    protected boolean useNavigationDrawer() {
-//        return true;
-//    }
-//
-//    @Override
-//    public void onServiceConnected() {
-//
-//    }
 
 }
