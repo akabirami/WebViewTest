@@ -16,8 +16,8 @@ public class AppExitDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog alert= new AlertDialog.Builder(getActivity())
-                .setTitle("Are you sure you want to exit")
-                .setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+                .setTitle("Are you sure you want to exit ?")
+                .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         getActivity().finish();

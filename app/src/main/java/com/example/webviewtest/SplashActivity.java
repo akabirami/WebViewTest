@@ -11,9 +11,11 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 /**
@@ -56,8 +58,11 @@ public class SplashActivity extends AppCompatActivity implements NetworkChangeRe
     @Override
     public void networkUnavailable() {
         View view = snack.getView();
+        FrameLayout.LayoutParams params =(FrameLayout.LayoutParams)view.getLayoutParams();
+        params.bottomMargin=150;
         TextView tv = (TextView) view.findViewById(android.support.design.R.id.snackbar_text);
         tv.setTextColor(Color.RED);
+        tv.setTextSize(15);
         snack.show();
     }
 }

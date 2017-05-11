@@ -5,6 +5,6 @@ package com.example.webviewtest;
  */
 public class Constants {
     public static final String WEBVIEW_URL = "WEBVIEW_URL";
-    public static final String URL = "https://www.paypal.com" ;
+    public static final String URL = "https://www.google.com" ;
     public static final String WEBVIEW_TITLE = "WEBVIEW_TITLE";
 }
