@@ -15,19 +15,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-
-/**
- * Created by rikohli on 28-Mar-16.
- *
- */
 public class WebViewActivity extends AppCompatActivity {
     private WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle bundle=getIntent().getExtras();
-        String url = bundle.getString(Constants.WEBVIEW_URL);
+        String url= Constants.URL;
         setContentView(R.layout.webview_layout);
 
         mWebView = (WebView) findViewById(R.id.webView);
@@ -78,6 +72,15 @@ public class WebViewActivity extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(isTaskRoot()) {
+            new AppExitDialogFragment().show(getSupportFragmentManager(), null);
+        } else {
+            super.onBackPressed();
+        }
     }
 
 
